@@ -3,6 +3,7 @@ const browserSync = require('browser-sync').create();
 const sass        = require('gulp-sass');
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
+const sassGlob = require('gulp-sass-glob');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -18,6 +19,7 @@ gulp.task('serve', ['sass'], function() {
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
     return gulp.src('app/scss/main.scss')
+        .pipe(sassGlob())
         .pipe(sass())
         .pipe(rename('style.css'))
         .pipe(autoprefixer({

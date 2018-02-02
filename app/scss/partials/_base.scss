@@ -1,0 +1,12 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: r(1200px);
+    padding: r(15px);
+    margin: auto;
+}

@@ -1,5 +1,5 @@
 header {
-    height: 500px;
+    height: r(500px);
     background: $green-gradient;
     display: flex;
     justify-content: center;
@@ -11,18 +11,18 @@ header {
 
         &image-container,
         &image-border {
-            height: 170px;
-            width: 170px;
+            height: r(160px);
+            width: r(160px);
             border-radius: 50%;
         }
 
         &image-container {
             overflow: hidden;
-            margin-bottom: 20px;
+            margin-bottom: r(20px);
         }
 
         &image-border {
-            border: 3px dotted $dark-green;
+            border: 3px dotted $darker-green;
             text-align: center;
             display: flex;
             align-items: flex-end;
@@ -30,9 +30,9 @@ header {
         }
 
         &image {
-            height: 150px;
+            height: r(140px);
             position: relative;
-            top: 3px;
+            top: 4px;
             left: 3px;
         }
 
@@ -40,12 +40,12 @@ header {
             color: white;
         }
 
-        &h2 {
+        &h3 {
             color: #2c8579;
         }
 
         &h1,
-        &h2 {
+        &h3 {
             margin: 0;
         }
     }

@@ -1,0 +1,31 @@
+.projects {
+
+    .section-title--projects {
+
+        &:before {
+            background: $red;
+            border-radius: 0 10px 10px 0;
+        }
+        &:after {
+            content: "";
+            width: r(12px);
+            height: r(12px);
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            top: r(23px);
+            right: r(1px);
+            z-index: 100;
+        }
+    }
+}
+
+.horiz-card {
+    &--no-mans-sky &__image {
+        background-image: url(http://via.placeholder.com/350x150);
+    }
+
+    &--hover-scroll &__image {
+        background-image: url(http://via.placeholder.com/360x160);
+    }
+}

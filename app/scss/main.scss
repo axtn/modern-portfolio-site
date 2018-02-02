@@ -1,4 +1,7 @@
-@import 'grid';
-@import 'variables';
-@import 'base';
-@import 'header';
+@import './modules/*';
+@import 'partials/grid';
+@import 'partials/base';
+@import 'partials/typography';
+@import 'partials/header';
+@import 'partials/cards';
+@import 'partials/projects-section'
