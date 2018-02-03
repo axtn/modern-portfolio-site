@@ -1,4 +1,5 @@
-.horiz-card-link {
+.horiz-card-link,
+.vert-card-link {
     text-decoration: none;
     color: $body-color;
 }
@@ -7,9 +8,17 @@
     width: 100%;
     height: r(200px);
     box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.16);
+    background: $off-white;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s ease-in-out;
+    transition-property: transform, box-shadow;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.16);
+    }
 
     &__text {
         width: 40%;
@@ -19,7 +28,6 @@
 
     &__title {
         font-family: $body-font;
-        background: $off-white;
         margin: 0;
     }
 
@@ -30,7 +38,7 @@
     }
 
     &__image {
-        width: 60%;
+        width: 60.001%; // extra .001 gets rid of weird white gap
         height: 100%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -38,13 +46,72 @@
         position: relative;
 
         &:before {
+            // Low opacity color overlay. Set background color on specific element
             content: "";
             position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
-            background: rgba($red, .4);
+        }
+    }
+}
+
+
+.vert-card {
+    width: r(200px);
+    height: r(290px);
+    box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.16);
+    background: $off-white;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    transition: .3s ease-in-out;
+    transition-property: transform, box-shadow;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.16);
+    }
+
+    &__text {
+        padding: r(10px);
+        text-align: center;
+        align-self: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        font-family: $body-font;
+        margin: 0;
+    }
+
+    &__site {
+        font-size: r(12px);
+        display: block;
+        margin-top: r(10px);
+    }
+
+    &__image {
+        height: 40%;
+        width: 100%;
+        background: rgba($blue, .4);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        &:before {
+            // Low opacity color overlay. Set background color on specific element
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
         }
     }
 }

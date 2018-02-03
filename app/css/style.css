@@ -304,7 +304,8 @@ header {
   header .header__h1, header .header__h3 {
     margin: 0; }
 
-.horiz-card-link {
+.horiz-card-link,
+.vert-card-link {
   text-decoration: none;
   color: #515151; }
 
@@ -313,6 +314,7 @@ header {
   height: 12.5rem;
   -webkit-box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.16);
+  background: #FBFBFB;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,21 +323,31 @@ header {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  -webkit-transition-property: -webkit-transform, -webkit-box-shadow;
+  transition-property: -webkit-transform, -webkit-box-shadow;
+  transition-property: transform, box-shadow;
+  transition-property: transform, box-shadow, -webkit-transform, -webkit-box-shadow; }
+  .horiz-card:hover {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.16); }
   .horiz-card__text {
     width: 40%;
     padding: 0.625rem;
     text-align: center; }
   .horiz-card__title {
     font-family: "Open Sans", sans-serif;
-    background: #FBFBFB;
     margin: 0; }
   .horiz-card__site {
     font-size: 0.75rem;
     display: block;
     margin-top: 0.625rem; }
   .horiz-card__image {
-    width: 60%;
+    width: 60.001%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -347,14 +359,84 @@ header {
       top: 0;
       right: 0;
       bottom: 0;
-      left: 0;
-      background: rgba(233, 183, 183, 0.4); }
+      left: 0; }
 
-.projects .section-title--projects:before {
+.vert-card {
+  width: 12.5rem;
+  height: 18.125rem;
+  -webkit-box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.16);
+  background: #FBFBFB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  -webkit-transition-property: -webkit-transform, -webkit-box-shadow;
+  transition-property: -webkit-transform, -webkit-box-shadow;
+  transition-property: transform, box-shadow;
+  transition-property: transform, box-shadow, -webkit-transform, -webkit-box-shadow; }
+  .vert-card:hover {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.16); }
+  .vert-card__text {
+    padding: 0.625rem;
+    text-align: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .vert-card__title {
+    font-family: "Open Sans", sans-serif;
+    margin: 0; }
+  .vert-card__site {
+    font-size: 0.75rem;
+    display: block;
+    margin-top: 0.625rem; }
+  .vert-card__image {
+    height: 40%;
+    width: 100%;
+    background: rgba(183, 221, 233, 0.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative; }
+    .vert-card__image:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+
+.projects {
+  padding-bottom: 110px; }
+
+.section-title--projects:before {
   background: #E9B7B7;
   border-radius: 0 10px 10px 0; }
 
-.projects .section-title--projects:after {
+.section-title--projects:after {
   content: "";
   width: 0.75rem;
   height: 0.75rem;
@@ -362,11 +444,80 @@ header {
   background: white;
   position: absolute;
   top: 1.4375rem;
-  right: 0.0625rem;
-  z-index: 100; }
+  right: 0.0625rem; }
+
+.horiz-card__image:before {
+  background: rgba(233, 183, 183, 0.35); }
 
 .horiz-card--no-mans-sky .horiz-card__image {
-  background-image: url(http://via.placeholder.com/350x150); }
+  background-image: url("../img/no-mans-sky.jpg"); }
 
 .horiz-card--hover-scroll .horiz-card__image {
   background-image: url(http://via.placeholder.com/360x160); }
+
+.section-title--work:before {
+  background: #B7DDE9; }
+
+.section-title--work:after {
+  content: "";
+  width: 1.25rem;
+  height: .5em;
+  -webkit-transform: skewX(-40deg);
+  transform: skewX(-40deg);
+  background: white;
+  position: absolute;
+  right: -0.875rem;
+  bottom: 0.125rem;
+  z-index: 100; }
+
+.section-title--experience:before {
+  background: #A4E9C2; }
+
+.exp-timeline__date {
+  width: 6.875rem;
+  height: 2.0625rem;
+  background: #A4E9C2;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  border-radius: 1.875rem;
+  text-align: center;
+  padding-top: 0.4375rem;
+  position: relative; }
+  .exp-timeline__date--start:before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: calc(50% - 0.5rem);
+    background: #A4E9C2;
+    border-radius: 50%;
+    z-index: -1;
+    bottom: -0.5rem; }
+  .exp-timeline__date--middle:before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: calc(50% - 0.5rem);
+    background: #A4E9C2;
+    border-radius: 50%;
+    z-index: -1;
+    bottom: -0.5rem;
+    -webkit-box-shadow: 0-2rem 0 #A4E9C2;
+    box-shadow: 0-2rem 0 #A4E9C2; }
+  .exp-timeline__date--present:before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: calc(50% - 0.5rem);
+    background: #A4E9C2;
+    border-radius: 50%;
+    z-index: -1;
+    top: -0.5rem; }
+
+.exp-timeline__h3 {
+  font-family: "Open Sans", sans-serif; }
+  .exp-timeline__h3--thin {
+    font-weight: 400; }

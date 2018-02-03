@@ -1,28 +1,34 @@
 .projects {
+    padding-bottom: 110px;
+}
 
-    .section-title--projects {
+.section-title--projects {
 
-        &:before {
-            background: $red;
-            border-radius: 0 10px 10px 0;
-        }
-        &:after {
-            content: "";
-            width: r(12px);
-            height: r(12px);
-            border-radius: 50%;
-            background: white;
-            position: absolute;
-            top: r(23px);
-            right: r(1px);
-            z-index: 100;
-        }
+    &:before {
+        background: $red;
+        border-radius: 0 10px 10px 0;
+    }
+    &:after {
+        // White dot accent on header line
+        content: "";
+        width: r(12px);
+        height: r(12px);
+        border-radius: 50%;
+        background: white;
+        position: absolute;
+        top: r(23px);
+        right: r(1px);
     }
 }
 
 .horiz-card {
+
+    &__image:before {
+        background: rgba($red, .35);
+    }
+
     &--no-mans-sky &__image {
-        background-image: url(http://via.placeholder.com/350x150);
+        background-image: url('../img/no-mans-sky.jpg');
     }
 
     &--hover-scroll &__image {

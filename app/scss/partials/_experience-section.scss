@@ -1,0 +1,73 @@
+.experience {
+
+}
+
+.section-title--experience {
+
+    &:before {
+        background: $green;
+    }
+}
+
+// Mixin to place psuedo class dot on top or bottom
+@mixin timeline-date-dot($position) {
+    content: "";
+    width: r(16px);
+    height: r(16px);
+    position: absolute;
+    left: calc(50% - #{r(8px)});
+    background: $green;
+    border-radius: 50%;
+    z-index: -1;
+
+    @if $position == 'top' {
+        top: - r(8px);
+    } @else if $position == 'bottom' {
+        bottom: - r(8px);
+    } @else if $position == 'both' {
+        bottom: - r(8px);
+        box-shadow: 0 - r(32px) 0 $green;
+    }
+}
+
+.exp-timeline {
+
+    &__date {
+        width: r(110px);
+        height: r(33px);
+        background: $green;
+        font-family: $header-font;
+        font-weight: 300;
+        font-style: italic;
+        border-radius: r(30px);
+        text-align: center;
+        padding-top: r(7px);
+        position: relative;
+
+        &--start {
+            &:before {
+                @include timeline-date-dot('bottom');
+            }
+        }
+
+        &--middle {
+            &:before {
+                @include timeline-date-dot('both');
+            }
+        }
+
+        &--present {
+            &:before {
+                @include timeline-date-dot('top');
+            }
+        }
+    }
+
+    &__h3 {
+        font-family: $body-font;
+
+        &--thin {
+            font-weight: 400;
+        }
+    }
+}

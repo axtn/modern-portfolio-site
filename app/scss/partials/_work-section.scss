@@ -1,0 +1,20 @@
+.work {
+}
+
+.section-title--work {
+
+    &:before {
+        background: $blue;
+    }
+    &:after {
+        content: "";
+        width: r(20px);
+        height: .5em;
+        transform: skewX(-40deg);
+        background: white;
+        position: absolute;
+        right: r(-14px);
+        bottom: r(2px);
+        z-index: 100;
+    }
+}
