@@ -1,9 +1,48 @@
 .me {
     background: $green-gradient;
+    padding-bottom: r(30px);
+
+    &__p {
+        max-width: r(700px);
+        margin: auto;
+    }
 }
 
 .section-title--me {
+    margin-top: r(50px);
+
     &:after {
         background: white;
+    }
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+
+    &__title {
+        color: white;
+        margin-bottom: r(10px);
+    }
+
+    &__ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    &__li {
+        padding-left: r(10px);
+    }
+}
+
+.social {
+    text-align: center;
+    margin: r(100px) 0 0 0;
+
+    &__icon {
+        color: white;
+        text-decoration: none;
+        font-size: r(50px);
+        padding: 0 20px;
     }
 }

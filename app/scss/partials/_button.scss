@@ -9,22 +9,35 @@
     font-size: r(18px);
     text-decoration: none;
     border-radius: 4px;
+    display: inline-block;
+
+    &:before {
+        @include icomoon;
+    }
 
 
     &--download {
         background-color: $dark-green;
         color: white;
-        margin: 80px auto;
-        display: inline-block;
+        margin: r(80px) auto 0;
 
         &:before {
             content: "\e901";
-            @include icomoon;
             margin-right: r(12px);
         }
     }
 
     &--email {
+        background-color: white;
+        color: $dark-green;
+        margin: r(80px) 0 0;
 
+        &:before {
+            content: "\e902";
+            color: $dark-green;
+            position: relative;
+            top: r(1px);
+            margin-right: r(12px);
+        }
     }
 }

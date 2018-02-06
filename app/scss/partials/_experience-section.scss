@@ -1,4 +1,5 @@
 .experience {
+    padding-bottom: 0;
 
 }
 
@@ -42,21 +43,26 @@
         text-align: center;
         padding-top: r(7px);
         position: relative;
-        margin: r(32px) auto;
+
+        // Variable that adjusts spacing between timeline dates
+        $date-gutter: r(55px);
 
         &--start {
+            margin: 0 auto $date-gutter;
             &:before {
                 @include timeline-date-dot('bottom');
             }
         }
 
         &--middle {
+            margin: $date-gutter auto;
             &:before {
                 @include timeline-date-dot('both');
             }
         }
 
         &--present {
+            margin: $date-gutter auto 0;
             &:before {
                 @include timeline-date-dot('top');
             }
