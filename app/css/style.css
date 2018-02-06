@@ -218,6 +218,10 @@
   padding: 0.9375rem;
   margin: auto; }
 
+section {
+  margin-top: 3.125rem;
+  padding-bottom: 9.375rem; }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.125rem;
@@ -249,7 +253,7 @@ p {
 .section-title {
   width: 60%;
   position: relative;
-  margin: 1.875rem 0 5rem 0; }
+  margin: 0 0 5rem 0; }
   .section-title:before {
     content: "";
     width: 100%;
@@ -258,6 +262,28 @@ p {
     left: 0.125rem;
     bottom: 0.125rem;
     z-index: -1; }
+
+.button {
+  height: 3.5rem;
+  padding: 1.25rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-radius: 4px; }
+  .button--download {
+    background-color: #7CBFAB;
+    color: white; }
+    .button--download:before {
+      content: "";
+      position: relative;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      top: 2px;
+      left: 0;
+      margin-right: 15px;
+      background: url("../img/download.svg");
+      background-repeat: no-repeat; }
 
 header {
   height: 31.25rem;
@@ -427,12 +453,11 @@ header {
     font-family: "Open Sans", sans-serif;
     margin: 0; }
   .vert-card__image {
-    height: 40%;
+    height: 55%;
     width: 100%;
-    background: rgba(183, 221, 233, 0.4);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     position: relative; }
     .vert-card__image:before {
       content: "";
@@ -443,7 +468,6 @@ header {
       left: 0; }
 
 .projects {
-  padding-bottom: 110px;
   position: relative; }
   .projects:before {
     content: "";
@@ -479,6 +503,19 @@ header {
 .horiz-card--float-scroll .horiz-card__image {
   background-image: url("../img/float-scrollbar.jpg"); }
 
+.work {
+  position: relative; }
+  .work:before {
+    content: "";
+    position: absolute;
+    top: 3.3125rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: repeating-linear-gradient(-45deg, #B7DDE9, #B7DDE9 0.38em, transparent 0, transparent 1.1em);
+    opacity: .2; }
+
 .section-title--work:before {
   background: #B7DDE9; }
 
@@ -486,13 +523,28 @@ header {
   content: "";
   width: 1.25rem;
   height: .5em;
-  -webkit-transform: skewX(-40deg);
-  transform: skewX(-40deg);
+  -webkit-transform: skewX(-45deg);
+  transform: skewX(-45deg);
   background: white;
   position: absolute;
   right: -0.875rem;
   bottom: 0.125rem;
   z-index: 100; }
+
+.vert-card__image:before {
+  background: rgba(183, 221, 233, 0.35); }
+
+.vert-card--gb .vert-card__image {
+  background-image: url("../img/gb-heights.com.jpg"); }
+
+.vert-card--marble .vert-card__image {
+  background-image: url("../img/lamarblerestoration.com.jpg"); }
+
+.vert-card--formstack .vert-card__image {
+  background-image: url("../img/watchtower.formstack.com.jpg"); }
+
+.vert-card--jean .vert-card__image {
+  background-image: url("../img/whoisjean.com.jpg"); }
 
 .section-title--experience:before {
   background: #A4E9C2; }
@@ -548,10 +600,10 @@ header {
   font-size: 1.375rem; }
   .exp-timeline__h4--thin {
     font-weight: 400;
-    margin-bottom: 15px; }
+    margin-bottom: 0.9375rem; }
 
 .exp-timeline__p {
-  max-width: 650px;
+  max-width: 40.625rem;
   margin: 0; }
   .exp-timeline__p:not(:last-child) {
     margin-bottom: 0.625rem; }
@@ -564,9 +616,18 @@ header {
   -ms-flex-pack: center;
   justify-content: center; }
 
+.exp-timeline__logo-wrapper {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 3px dotted #7CBFAB;
+  border-radius: 50%;
+  padding: 0.9375rem;
+  margin-right: 1.6875rem;
+  height: 2.5rem;
+  width: 2.5rem; }
+
 .exp-timeline__logo {
-  width: 100px;
-  height: 100px;
-  margin-right: 1.6875rem; }
+  width: 2.5rem;
+  height: 2.5rem; }
 
 /*# sourceMappingURL=style.css.map */

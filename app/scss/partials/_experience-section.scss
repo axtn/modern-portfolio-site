@@ -71,12 +71,12 @@
 
         &--thin {
             font-weight: 400;
-            margin-bottom: 15px;
+            margin-bottom: r(15px);
         }
     }
 
     &__p {
-        max-width: 650px;
+        max-width: r(650px);
         margin: 0;
 
         &:not(:last-child) {
@@ -89,9 +89,18 @@
         justify-content: center;
     }
 
-    &__logo {
-        width: 100px;
-        height: 100px;
+    &__logo-wrapper {
+        box-sizing: content-box;
+        border: 3px dotted $dark-green;
+        border-radius: 50%;
+        padding: r(15px);
         margin-right: r(27px);
+        height: r(40px);
+        width: r(40px);
+    }
+
+    &__logo {
+        width: r(40px);
+        height: r(40px);
     }
 }

@@ -104,12 +104,11 @@
     }
 
     &__image {
-        height: 40%;
+        height: 55%;
         width: 100%;
-        background: rgba($blue, .4);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
+        background-position: top center;
         position: relative;
 
         &:before {

@@ -1,4 +1,18 @@
 .work {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: r(53px);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-image: repeating-linear-gradient(-45deg, 
+        $blue, $blue .38em, transparent 0, transparent 1.1em);
+        opacity: .2;
+    }
 }
 
 .section-title--work {
@@ -10,11 +24,33 @@
         content: "";
         width: r(20px);
         height: .5em;
-        transform: skewX(-40deg);
+        transform: skewX(-45deg);
         background: white;
         position: absolute;
         right: r(-14px);
         bottom: r(2px);
         z-index: 100;
+    }
+}
+
+.vert-card {
+    &__image:before {
+        background: rgba($blue, .35);
+    }
+
+    &--gb &__image {
+        background-image: url('../img/gb-heights.com.jpg');
+    }
+
+    &--marble &__image {
+        background-image: url('../img/lamarblerestoration.com.jpg');
+    }
+
+    &--formstack &__image {
+        background-image: url('../img/watchtower.formstack.com.jpg');
+    }
+
+    &--jean &__image {
+        background-image: url('../img/whoisjean.com.jpg');
     }
 }
