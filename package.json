@@ -4,7 +4,8 @@
   "description": "Personal Portfolio Site",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.4"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",

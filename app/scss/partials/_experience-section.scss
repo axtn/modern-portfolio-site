@@ -43,6 +43,7 @@
         text-align: center;
         padding-top: r(7px);
         position: relative;
+        margin: r(32px) auto;
 
         &--start {
             &:before {
@@ -63,11 +64,34 @@
         }
     }
 
-    &__h3 {
+    &__h4 {
         font-family: $body-font;
+        margin: 0;
+        font-size: r(22px);
 
         &--thin {
             font-weight: 400;
+            margin-bottom: 15px;
         }
+    }
+
+    &__p {
+        max-width: 650px;
+        margin: 0;
+
+        &:not(:last-child) {
+            margin-bottom: r(10px);
+        }
+    }
+
+    &__entry {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logo {
+        width: 100px;
+        height: 100px;
+        margin-right: r(27px);
     }
 }

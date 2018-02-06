@@ -1,7 +1,27 @@
-.horiz-card-link,
-.vert-card-link {
-    text-decoration: none;
-    color: $body-color;
+.horiz-card,
+.vert-card {
+    &-link {
+        text-decoration: none;
+        color: $body-color;
+    }
+
+    &__site {
+        font-size: r(12px);
+        display: inline-block;
+        margin-top: r(10px);
+        position: relative;
+
+        &:before {
+            content: "";
+            background: url('../img/external-link.svg');
+            background-repeat: no-repeat;
+            width: r(10px);
+            height: r(10px);
+            position: absolute;
+            top: r(2px);
+            right: - r(16px);
+        }
+    }
 }
 
 .horiz-card {
@@ -31,14 +51,8 @@
         margin: 0;
     }
 
-    &__site {
-        font-size: r(12px);
-        display: block;
-        margin-top: r(10px);
-    }
-
     &__image {
-        width: 60.001%; // extra .001 gets rid of weird white gap
+        width: 60.01%; // extra .001 gets rid of weird white gap
         height: 100%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -77,22 +91,16 @@
     &__text {
         padding: r(10px);
         text-align: center;
-        align-self: center;
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     &__title {
         font-family: $body-font;
         margin: 0;
-    }
-
-    &__site {
-        font-size: r(12px);
-        display: block;
-        margin-top: r(10px);
     }
 
     &__image {

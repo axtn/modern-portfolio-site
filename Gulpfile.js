@@ -4,6 +4,7 @@ const sass        = require('gulp-sass');
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
 const sassGlob = require('gulp-sass-glob');
+const sourcemaps = require('gulp-sourcemaps');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -20,12 +21,14 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function() {
     return gulp.src('app/scss/main.scss')
         .pipe(sassGlob())
+        .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(rename('style.css'))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest("app/css"))
         .pipe(browserSync.stream());
 });

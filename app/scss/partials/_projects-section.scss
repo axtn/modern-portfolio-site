@@ -1,5 +1,18 @@
 .projects {
     padding-bottom: 110px;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: r(60px);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-image: url('../img/texture-dots.png');
+        opacity: .4;
+    }
 }
 
 .section-title--projects {
@@ -31,7 +44,7 @@
         background-image: url('../img/no-mans-sky.jpg');
     }
 
-    &--hover-scroll &__image {
-        background-image: url(http://via.placeholder.com/360x160);
+    &--float-scroll &__image {
+        background-image: url('../img/float-scrollbar.jpg');
     }
 }

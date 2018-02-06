@@ -220,7 +220,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: #515151; }
 
 h1,
@@ -242,6 +242,9 @@ h3 {
 
 h4 {
   font-size: 1.25rem; }
+
+p {
+  line-height: 1.4em; }
 
 .section-title {
   width: 60%;
@@ -309,6 +312,23 @@ header {
   text-decoration: none;
   color: #515151; }
 
+.horiz-card__site,
+.vert-card__site {
+  font-size: 0.75rem;
+  display: inline-block;
+  margin-top: 0.625rem;
+  position: relative; }
+  .horiz-card__site:before,
+  .vert-card__site:before {
+    content: "";
+    background: url("../img/external-link.svg");
+    background-repeat: no-repeat;
+    width: 0.625rem;
+    height: 0.625rem;
+    position: absolute;
+    top: 0.125rem;
+    right: -1rem; }
+
 .horiz-card {
   width: 100%;
   height: 12.5rem;
@@ -342,12 +362,8 @@ header {
   .horiz-card__title {
     font-family: "Open Sans", sans-serif;
     margin: 0; }
-  .horiz-card__site {
-    font-size: 0.75rem;
-    display: block;
-    margin-top: 0.625rem; }
   .horiz-card__image {
-    width: 60.001%;
+    width: 60.01%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -391,8 +407,6 @@ header {
   .vert-card__text {
     padding: 0.625rem;
     text-align: center;
-    -ms-flex-item-align: center;
-    align-self: center;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -405,14 +419,13 @@ header {
     flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .vert-card__title {
     font-family: "Open Sans", sans-serif;
     margin: 0; }
-  .vert-card__site {
-    font-size: 0.75rem;
-    display: block;
-    margin-top: 0.625rem; }
   .vert-card__image {
     height: 40%;
     width: 100%;
@@ -430,7 +443,18 @@ header {
       left: 0; }
 
 .projects {
-  padding-bottom: 110px; }
+  padding-bottom: 110px;
+  position: relative; }
+  .projects:before {
+    content: "";
+    position: absolute;
+    top: 3.75rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("../img/texture-dots.png");
+    opacity: .4; }
 
 .section-title--projects:before {
   background: #E9B7B7;
@@ -452,8 +476,8 @@ header {
 .horiz-card--no-mans-sky .horiz-card__image {
   background-image: url("../img/no-mans-sky.jpg"); }
 
-.horiz-card--hover-scroll .horiz-card__image {
-  background-image: url(http://via.placeholder.com/360x160); }
+.horiz-card--float-scroll .horiz-card__image {
+  background-image: url("../img/float-scrollbar.jpg"); }
 
 .section-title--work:before {
   background: #B7DDE9; }
@@ -483,7 +507,8 @@ header {
   border-radius: 1.875rem;
   text-align: center;
   padding-top: 0.4375rem;
-  position: relative; }
+  position: relative;
+  margin: 2rem auto; }
   .exp-timeline__date--start:before {
     content: "";
     width: 1rem;
@@ -517,7 +542,31 @@ header {
     z-index: -1;
     top: -0.5rem; }
 
-.exp-timeline__h3 {
-  font-family: "Open Sans", sans-serif; }
-  .exp-timeline__h3--thin {
-    font-weight: 400; }
+.exp-timeline__h4 {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  font-size: 1.375rem; }
+  .exp-timeline__h4--thin {
+    font-weight: 400;
+    margin-bottom: 15px; }
+
+.exp-timeline__p {
+  max-width: 650px;
+  margin: 0; }
+  .exp-timeline__p:not(:last-child) {
+    margin-bottom: 0.625rem; }
+
+.exp-timeline__entry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.exp-timeline__logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 1.6875rem; }
+
+/*# sourceMappingURL=style.css.map */
