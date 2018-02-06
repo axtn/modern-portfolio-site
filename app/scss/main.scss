@@ -1,6 +1,7 @@
-@import 'modules/*';
 @import 'normalize.css/normalize';
-@import 'partials/grid';
+@import 'flexboxgrid-sass/flexboxgrid';
+
+@import 'modules/*';
 @import 'partials/base';
 @import 'partials/typography';
 @import 'partials/icomoon';

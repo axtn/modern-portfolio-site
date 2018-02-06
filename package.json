@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "flexboxgrid-sass": "^8.0.5",
     "gulp-sourcemaps": "^2.6.4",
     "normalize.css": "^7.0.0"
   },
