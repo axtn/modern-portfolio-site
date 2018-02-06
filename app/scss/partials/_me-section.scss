@@ -27,8 +27,6 @@
 
 .skills {
 
-    text-align: left;
-
     &__title {
         color: white;
         margin-bottom: r(10px);
@@ -40,7 +38,12 @@
     }
 
     &__li {
-        padding-left: r(10px);
+        display: inline-block;
+        font-size: r(16px);
+        background: white;
+        margin: r(5px) auto;
+        border-radius: r(15px);
+        padding: r(5px) r(12px);
     }
 }
 

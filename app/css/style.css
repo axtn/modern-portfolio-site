@@ -2531,16 +2531,21 @@ header {
   .section-title--me:after {
     background: white; }
 
-.skills {
-  text-align: left; }
-  .skills__title {
-    color: white;
-    margin-bottom: 0.625rem; }
-  .skills__ul {
-    list-style-type: none;
-    padding-left: 0; }
-  .skills__li {
-    padding-left: 0.625rem; }
+.skills__title {
+  color: white;
+  margin-bottom: 0.625rem; }
+
+.skills__ul {
+  list-style-type: none;
+  padding-left: 0; }
+
+.skills__li {
+  display: inline-block;
+  font-size: 1rem;
+  background: white;
+  margin: 0.3125rem auto;
+  border-radius: 0.9375rem;
+  padding: 0.3125rem 0.75rem; }
 
 .social {
   text-align: center;
