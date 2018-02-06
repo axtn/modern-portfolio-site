@@ -22,7 +22,7 @@ gulp.task('sass', function() {
     return gulp.src('app/scss/main.scss')
         .pipe(sassGlob())
         .pipe(sourcemaps.init())
-        .pipe(sass())
+        .pipe(sass({includePaths: ['node_modules']}))
         .pipe(rename('style.css'))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],

@@ -17,10 +17,10 @@
 
 .section-title--work {
 
-    &:before {
+    &:after {
         background: $blue;
     }
-    &:after {
+    &:before {
         content: "";
         width: r(20px);
         height: .5em;

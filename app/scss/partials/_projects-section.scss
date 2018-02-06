@@ -16,11 +16,11 @@
 
 .section-title--projects {
 
-    &:before {
+    &:after {
         background: $red;
         border-radius: 0 10px 10px 0;
     }
-    &:after {
+    &:before {
         // White dot accent on header line
         content: "";
         width: r(12px);

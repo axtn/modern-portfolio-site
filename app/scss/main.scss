@@ -1,10 +1,13 @@
-@import './modules/*';
+@import 'modules/*';
+@import 'normalize.css/normalize';
 @import 'partials/grid';
 @import 'partials/base';
 @import 'partials/typography';
+@import 'partials/icomoon';
 @import 'partials/button';
 @import 'partials/header';
 @import 'partials/cards';
 @import 'partials/projects-section';
 @import 'partials/work-section';
 @import 'partials/experience-section';
+@import 'partials/me-section';

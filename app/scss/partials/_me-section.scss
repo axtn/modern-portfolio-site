@@ -1,0 +1,9 @@
+.me {
+    background: $green-gradient;
+}
+
+.section-title--me {
+    &:after {
+        background: white;
+    }
+}

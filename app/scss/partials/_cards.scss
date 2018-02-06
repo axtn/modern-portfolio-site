@@ -11,15 +11,10 @@
         margin-top: r(10px);
         position: relative;
 
-        &:before {
-            content: "";
-            background: url('../img/external-link.svg');
-            background-repeat: no-repeat;
-            width: r(10px);
-            height: r(10px);
-            position: absolute;
-            top: r(2px);
-            right: - r(16px);
+        &:after {
+            content: "\e903";
+            @include icomoon;
+            margin-left: r(4px);
         }
     }
 }
