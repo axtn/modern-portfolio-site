@@ -2,9 +2,18 @@
     background: $green-gradient;
     padding-bottom: r(30px);
 
+    &__face {
+        width: 100%;
+        max-width: r(534px);
+        display: block;
+        margin: 0 auto r(40px);
+        border-radius: 10px;
+        position: relative;
+    }
+
     &__p {
         max-width: r(700px);
-        margin: auto;
+        margin: r(40px) auto;
     }
 }
 
@@ -17,8 +26,8 @@
 }
 
 .skills {
-    display: flex;
-    justify-content: center;
+
+    text-align: left;
 
     &__title {
         color: white;

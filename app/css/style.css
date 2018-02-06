@@ -2027,8 +2027,6 @@ template {
   box-sizing: border-box; }
 
 .container {
-  width: 100%;
-  max-width: 75rem;
   padding: 0.9375rem;
   margin: auto; }
 
@@ -2204,32 +2202,32 @@ header {
   header .header__h1, header .header__h3 {
     margin: 0; }
 
-.horiz-card-link,
-.vert-card-link {
+.horiz-card,
+.vert-card {
   text-decoration: none;
   color: #515151;
-  display: block; }
-
-.horiz-card__site,
-.vert-card__site {
-  font-size: 0.75rem;
-  display: inline-block;
-  margin-top: 0.625rem;
-  position: relative; }
-  .horiz-card__site:after,
-  .vert-card__site:after {
-    content: "\e903";
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-left: 0.25rem; }
+  display: block;
+  margin-bottom: 1rem; }
+  .horiz-card__site,
+  .vert-card__site {
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-top: 0.625rem;
+    position: relative; }
+    .horiz-card__site:after,
+    .vert-card__site:after {
+      content: "\e903";
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin-left: 0.25rem; }
 
 .horiz-card {
   width: 100%;
@@ -2280,7 +2278,6 @@ header {
       left: 0; }
 
 .vert-card {
-  width: 12.5rem;
   height: 18.125rem;
   -webkit-box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.16);
@@ -2367,7 +2364,7 @@ header {
   border-radius: 50%;
   background: white;
   position: absolute;
-  top: 1.4375rem;
+  bottom: 0.3125rem;
   right: 0.0625rem; }
 
 .horiz-card__image:before {
@@ -2518,9 +2515,16 @@ header {
   background: -webkit-gradient(linear, left top, right top, from(#7CBFAB), to(#A4E9C2));
   background: linear-gradient(to right, #7CBFAB, #A4E9C2);
   padding-bottom: 1.875rem; }
+  .me__face {
+    width: 100%;
+    max-width: 33.375rem;
+    display: block;
+    margin: 0 auto 2.5rem;
+    border-radius: 10px;
+    position: relative; }
   .me__p {
     max-width: 43.75rem;
-    margin: auto; }
+    margin: 2.5rem auto; }
 
 .section-title--me {
   margin-top: 3.125rem; }
@@ -2528,12 +2532,7 @@ header {
     background: white; }
 
 .skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  text-align: left; }
   .skills__title {
     color: white;
     margin-bottom: 0.625rem; }
