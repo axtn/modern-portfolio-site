@@ -74,6 +74,10 @@
         margin: 0;
         font-size: r(22px);
 
+        // @media screen and (max-width: $tablet) {
+        //     text-align: center;
+        // }
+
         &--thin {
             font-weight: 400;
             margin-bottom: r(15px);
@@ -92,6 +96,11 @@
     &__entry {
         display: flex;
         justify-content: center;
+
+        // @media screen and (max-width: $tablet) {
+        //     flex-direction: column;
+        //     align-items: center;
+        // }
     }
 
     &__logo-wrapper {
@@ -102,6 +111,10 @@
         margin-right: r(27px);
         height: r(40px);
         width: r(40px);
+
+        // @media screen and (max-width: $tablet) {
+        //     margin: 0 0 r(15px) 0;
+        // }
     }
 
     &__logo {

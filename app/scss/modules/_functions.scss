@@ -3,3 +3,8 @@
     $remSize: $size / 16px;
     @return #{$remSize}rem;
 }
+
+@function e($size) {
+    $emSize: $size / 16px;
+    @return #{$emSize}em;
+}

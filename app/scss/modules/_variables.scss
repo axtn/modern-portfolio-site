@@ -10,3 +10,12 @@ $green-gradient: linear-gradient(to right, #7CBFAB, #A4E9C2);
 
 $red: #E9B7B7;
 $blue: #B7DDE9;
+
+
+// Flexbox grid Media Queries
+// (media query min size [em]) (container size [rem])
+$breakpoints:
+  sm e(600px) r(580px),
+  md1 e(800px) r(780px),
+  md2 e(992px) r(972px),
+  lg e(1200px) r(1136px);
