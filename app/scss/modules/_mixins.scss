@@ -11,3 +11,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+@mixin buttonHover($bg-color) {
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}

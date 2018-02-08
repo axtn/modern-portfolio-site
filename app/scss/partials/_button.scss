@@ -10,6 +10,8 @@
     text-decoration: none;
     border-radius: 4px;
     display: inline-block;
+    transition: .2s ease;
+    transition-property: background-color;
 
     &:before {
         @include icomoon;
@@ -21,6 +23,8 @@
         color: white;
         margin: r(80px) auto 0;
 
+        @include buttonHover($dark-green);
+
         &:before {
             content: "\e901";
             margin-right: r(12px);
@@ -31,6 +35,8 @@
         background-color: white;
         color: $dark-green;
         margin: r(80px) 0 0;
+
+        @include buttonHover(white);
 
         &:before {
             content: "\e902";

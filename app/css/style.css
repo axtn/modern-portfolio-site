@@ -2520,7 +2520,11 @@ p {
   font-size: 1.125rem;
   text-decoration: none;
   border-radius: 4px;
-  display: inline-block; }
+  display: inline-block;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  -webkit-transition-property: background-color;
+  transition-property: background-color; }
   .button:before {
     font-family: 'icomoon' !important;
     speak: none;
@@ -2536,6 +2540,8 @@ p {
     background-color: #7CBFAB;
     color: white;
     margin: 5rem auto 0; }
+    .button--download:hover {
+      background-color: #5aae95; }
     .button--download:before {
       content: "\e901";
       margin-right: 0.75rem; }
@@ -2543,6 +2549,8 @@ p {
     background-color: white;
     color: #7CBFAB;
     margin: 5rem 0 0; }
+    .button--email:hover {
+      background-color: #e6e6e6; }
     .button--email:before {
       content: "\e902";
       color: #7CBFAB;
