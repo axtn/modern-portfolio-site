@@ -5,7 +5,7 @@
     var axtnEmail = 'hi@' + 'axtn.io';
 
     var addEmail = function() {
-        this.href="mailto:" + axtnEmail;
+        this.href='mailto:' + axtnEmail + '?subject=Hi Alex';
     }
 
     emailButton.addEventListener('click', addEmail);
