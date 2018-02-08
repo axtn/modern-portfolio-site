@@ -2420,6 +2420,9 @@ template {
 section {
   margin-top: 3.125rem;
   padding-bottom: 5rem; }
+  @media screen and (max-width: 37.4375em) {
+    section {
+      padding-bottom: 1.875rem; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -2465,7 +2468,7 @@ p {
     width: 100%;
     height: .5em;
     position: absolute;
-    left: 0.125rem;
+    left: 0.15625rem;
     bottom: 0.125rem;
     z-index: -1; }
 
@@ -2872,9 +2875,15 @@ header {
   font-family: "Open Sans", sans-serif;
   margin: 0;
   font-size: 1.375rem; }
+  @media screen and (max-width: 37.4375em) {
+    .exp-timeline__h4 {
+      text-align: center; } }
   .exp-timeline__h4--thin {
     font-weight: 400;
     margin-bottom: 0.9375rem; }
+    @media screen and (max-width: 37.4375em) {
+      .exp-timeline__h4--thin {
+        margin-top: 0.25rem; } }
 
 .exp-timeline__p {
   max-width: 40.625rem;
@@ -2889,6 +2898,15 @@ header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media screen and (max-width: 37.4375em) {
+    .exp-timeline__entry {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .exp-timeline__logo-wrapper {
   -webkit-box-sizing: content-box;
@@ -2899,6 +2917,9 @@ header {
   margin-right: 1.6875rem;
   height: 2.5rem;
   width: 2.5rem; }
+  @media screen and (max-width: 37.4375em) {
+    .exp-timeline__logo-wrapper {
+      margin: 0 0 0.625rem; } }
 
 .exp-timeline__logo {
   width: 2.5rem;

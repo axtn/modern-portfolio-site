@@ -13,4 +13,8 @@
 section {
     margin-top: r(50px);
     padding-bottom: r(80px);
+
+    @media screen and (max-width: e(599px)) {
+        padding-bottom: r(30px);
+    }
 }

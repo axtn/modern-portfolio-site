@@ -74,13 +74,17 @@
         margin: 0;
         font-size: r(22px);
 
-        // @media screen and (max-width: $tablet) {
-        //     text-align: center;
-        // }
+        @media screen and (max-width: e(599px)) {
+            text-align: center;
+        }
 
         &--thin {
             font-weight: 400;
             margin-bottom: r(15px);
+
+            @media screen and (max-width: e(599px)) {
+                margin-top: r(4px);
+            }
         }
     }
 
@@ -97,10 +101,10 @@
         display: flex;
         justify-content: center;
 
-        // @media screen and (max-width: $tablet) {
-        //     flex-direction: column;
-        //     align-items: center;
-        // }
+        @media screen and (max-width: e(599px)) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__logo-wrapper {
@@ -112,9 +116,9 @@
         height: r(40px);
         width: r(40px);
 
-        // @media screen and (max-width: $tablet) {
-        //     margin: 0 0 r(15px) 0;
-        // }
+        @media screen and (max-width: e(599px)) {
+            margin: 0 0 r(10px);
+        }
     }
 
     &__logo {
