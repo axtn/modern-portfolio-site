@@ -2,9 +2,6 @@ header {
     height: r(500px);
     background: $green-gradient;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
 
     .header__ {
@@ -18,7 +15,7 @@ header {
 
         &image-container {
             overflow: hidden;
-            margin-bottom: r(20px);
+            margin: 0 auto r(20px) auto;
         }
 
         &image-border {
@@ -46,6 +43,7 @@ header {
 
         &h1,
         &h3 {
+            text-align: center;
             margin: 0;
         }
     }

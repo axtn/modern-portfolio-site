@@ -2556,24 +2556,14 @@ header {
   background: linear-gradient(to right, #7CBFAB, #A4E9C2);
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+  display: flex; }
   header .header__image-container, header .header__image-border {
     height: 10rem;
     width: 10rem;
     border-radius: 50%; }
   header .header__image-container {
     overflow: hidden;
-    margin-bottom: 1.25rem; }
+    margin: 0 auto 1.25rem auto; }
   header .header__image-border {
     border: 3px dotted #2C8579;
     text-align: center;
@@ -2596,6 +2586,7 @@ header {
   header .header__h3 {
     color: #2c8579; }
   header .header__h1, header .header__h3 {
+    text-align: center;
     margin: 0; }
 
 .horiz-card,
@@ -2934,7 +2925,7 @@ header {
     max-width: 33.375rem;
     display: block;
     margin: 0 auto 2.5rem;
-    border-radius: 10px;
+    border-radius: 170px;
     position: relative; }
   .me__p {
     max-width: 43.75rem;
