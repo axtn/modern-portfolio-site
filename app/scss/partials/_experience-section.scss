@@ -108,21 +108,40 @@
     }
 
     &__logo-wrapper {
-        box-sizing: content-box;
-        border: 3px dotted $dark-green;
-        border-radius: 50%;
-        padding: r(15px);
-        margin-right: r(27px);
-        height: r(40px);
-        width: r(40px);
+        padding: r(5px) r(15px);
+        margin-right: r(15px);
 
         @media screen and (max-width: e(599px)) {
-            margin: 0 0 r(10px);
+            margin: 0 0 r(4px);
         }
     }
 
     &__logo {
-        width: r(40px);
-        height: r(40px);
+        width: r(55px);
+        height: r(55px);
+    }
+
+    &__volunteer-hr {
+        margin: 60px auto 40px;
+        text-align: center;
+        display: block;
+        width: 150px;
+        padding: 20px 15px;
+        box-sizing: content-box;
+        background: white;
+        text-transform: uppercase;
+        font-size: .85em;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-top: 2px solid #8aceb3;
+            max-width: 876px;
+            width: 100%;
+            margin: 7px auto;
+            z-index: -1;
+        }
     }
 }
