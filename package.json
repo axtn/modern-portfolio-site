@@ -10,7 +10,7 @@
     "normalize.css": "^7.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-rename": "^1.2.2",
